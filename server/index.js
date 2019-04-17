@@ -39,3 +39,9 @@ app.post("/tweets", (req, res) => {
   console.log("got here")
 
 });
+
+var createTweetElement = function (object){
+
+ var $tweet = $("<article>").addClass("tweet");
+
+}

@@ -26,6 +26,7 @@
 
 
 // Fake data taken from tweets.json
+/*
 const data = [
   {
     "user": {
@@ -72,6 +73,7 @@ const data = [
     "created_at": 1461113796368
   }
 ];
+*/
 
 
 //----------------------------------------------
@@ -86,7 +88,17 @@ function renderTweets(tweets){
 
 
 $(document).ready(function(){
-  renderTweets(data);
+  //renderTweets(data);
+
+  function loadTweets(){
+    $.ajax('tweets/', { method: 'GET' })
+    .then(function (res) {
+      //console.log('Success: ', res);
+      renderTweets(res);
+    });
+  }//end function loadtweets
+
+  loadTweets();
 
 });
 

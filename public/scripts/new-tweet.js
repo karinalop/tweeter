@@ -4,6 +4,7 @@ $(document).ready(function() {
   var text = $('textarea[name=text]');
   let counter = $('span.counter');
   var button = $('#tweet-submit');
+  var form = $('#tweet-form');
   //console.dir();
 
   text.on('keyup', function(event){
@@ -40,4 +41,11 @@ $(document).ready(function() {
          $('.new-tweet').slideToggle();
          $('textarea').focus();
   });
+
+  form.on('submit',function(){
+    counter.text(0);
+    counter.css("color", "black");
+
+  });
+
 }); // end document.ready

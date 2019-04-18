@@ -3,7 +3,7 @@ $(document).ready(function() {
   //console.log(window);
   var text = $('textarea[name=text]');
   let counter = $('span.counter');
-  var button = $('input#tweet-submit');
+  var button = $('#tweet-submit');
   //console.dir();
 
   text.on('keyup', function(event){

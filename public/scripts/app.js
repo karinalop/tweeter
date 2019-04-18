@@ -75,12 +75,16 @@ const data = [
 ];
 */
 
+function creatTweetDataObject(str){
+
+}
+
 
 //----------------------------------------------
 
 function renderTweets(tweets){
   tweets.forEach(element =>{
-    $('#tweets-container').append(createTweetElement(element));
+    $('#tweets-container').prepend(createTweetElement(element));
   });
 }
 
@@ -88,7 +92,7 @@ function renderTweets(tweets){
 
 
 $(document).ready(function(){
-  //renderTweets(data);
+    //renderTweets(data);
 
   function loadTweets(){
     $.ajax('tweets/', { method: 'GET' })
@@ -98,7 +102,27 @@ $(document).ready(function(){
     });
   }//end function loadtweets
 
-  loadTweets();
+  loadTweets(); //initial load
+
+  $('form').on('submit', function(event) {
+       event.preventDefault();
+       console.log('heard submit event');
+       let data = $(this).serialize();
+       console.log('data', data);
+
+      $.ajax({
+         url: '/tweets',
+         method: 'POST',
+         data: data
+        }).then(
+         (res) => {
+           loadTweets();
+           let form = document.getElementById('tweet-form');
+           form.reset();
+         }, // success (200-300)
+         (err) => { console.log('error') } // 400-500
+        )
+      });
 
 });
 

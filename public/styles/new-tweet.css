@@ -5,6 +5,7 @@
   padding: 10px;
   margin-left: 3em;
   margin-right: 3em;
+  display: none;
 }
 
 .new-tweet h2 {
@@ -20,3 +21,10 @@
   width: 330px;
 }
 
+.tweet-error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius: 3px;
+  display: none;
+
+}

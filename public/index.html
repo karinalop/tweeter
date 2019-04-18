@@ -17,19 +17,14 @@
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script>
-     $(document).ready(function(){
-       $('#compose').on('click', function () {
-         $('.new-tweet').slideToggle();
-         $('textarea').focus();
-       });
-     });
-   </script>
+
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="/scripts/new-tweet.js"></script>
 
     <!-- Font Awesome CSS -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -54,7 +49,9 @@
           <input id="tweet-submit" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
-      </section><br>
+        <label class="tweet-error"></label>
+
+      </section>
       <section id="tweets-container">
         <!-- <article class="tweet">
           <header class="tweet-header">
@@ -69,6 +66,6 @@
       </section>
 
     </main>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </body>
 </html>

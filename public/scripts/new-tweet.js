@@ -14,7 +14,7 @@ $(document).ready(function() {
       $('.tweet-error').text("Tweet is too long!!!");
       $('.tweet-error').css('display', 'block');
     }
-    if($(this).val().length > 0 && $(this).val().length <= 140){
+    if($(this).val().length >= 0 && $(this).val().length <= 140){
       $('.tweet-error').css('display', 'none');
       $('span.counter').css("color", "black");
     }

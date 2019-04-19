@@ -21,4 +21,9 @@ This repository is the starter code for the project: Students will fork and clon
 - md5 2.1.0 or above
 - mongodb 2.2.36 or above
 
+## Screenshots
 
+!["Screenshot of the Tweeter Home page"](https://github.com/karinalop/tweeter/blob/master/docs/tweeter-home-page.png)
+!["Screenshot of Compose New Tweet"](https://github.com/karinalop/tweeter/blob/master/docs/compose-new-tweet.png)
+!["Screenshot of the case Attempt to Submit an empty tweet"](https://github.com/karinalop/tweeter/blob/master/docs/submiting-empty-tweet.png)
+!["Screenshot of case when Tweet is too long"](https://github.com/karinalop/tweeter/blob/master/docs/tweet-too-long.png)
